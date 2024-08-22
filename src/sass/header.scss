@@ -1,0 +1,26 @@
+.header {
+    display: flex;              
+    align-items: center;       
+    justify-content: space-between; 
+    padding: 20px;             
+    background-color: #ffffff;  
+    
+    .header-logo {
+        height: 68px;
+    }
+
+    .header-nav {
+        display: flex;
+        gap: 30px; 
+        
+        .nav-link {
+            color: #333;
+            font-weight: bold;
+            height: 34px;
+            
+            &[href="#a-propos"] {
+                text-decoration: none; 
+            }
+        }
+    }
+}
