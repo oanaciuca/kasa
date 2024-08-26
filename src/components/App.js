@@ -1,14 +1,17 @@
-import Header from './Header.js';
-import Banner from './Banner.js';
+// src/components/App.js
 import React from 'react';
+import Home from '../pages/Home';
+import FicheLogement from '../pages/Fiche-logement';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-      <div className="App">
-          <Header />   
-          <Banner />  
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/fiche-logement/:id" element={<FicheLogement />} />
+        {/* Autres routes */}
+      </Routes>
   );
 }
 
-export default App
+export default App;

@@ -1,0 +1,64 @@
+.gallery {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.gallery .gallery__images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+.gallery .gallery__image {
+  flex: 0 0 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.gallery .gallery__arrow {
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+.gallery .gallery__arrow--prev {
+  left: 10px;
+  transform: translateY(-50%);
+}
+.gallery .gallery__arrow--next {
+  right: 10px;
+  transform: translateY(-50%);
+}
+.gallery .gallery__arrow svg {
+  width: 20px;
+  height: 20px;
+}
+.gallery .gallery__dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+.gallery .gallery__dots .gallery__dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.gallery .gallery__dots .gallery__dot--active {
+  background-color: #ffffff;
+}/*# sourceMappingURL=gallery.css.map */
