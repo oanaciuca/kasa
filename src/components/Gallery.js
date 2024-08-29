@@ -7,18 +7,25 @@ import rightArrow from '../assets/right_arrow.png';
 function Gallery({ images }) {
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    
     const handleNext = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+        setCurrentIndex((prevIndex) => {
+            let newIndex = prevIndex + 1;
+            if (newIndex === images.length) {
+                newIndex = 0; // Si on atteint la fin, revenir au début
+            }
+            return newIndex;
+        });
     };
-
     
     const handlePrevious = () => {
-        setCurrentIndex(
-            (prevIndex) => (prevIndex - 1 + images.length) % images.length
-        );
+        setCurrentIndex((prevIndex) => {
+            let newIndex = prevIndex - 1;
+            if (newIndex < 0) {
+                newIndex = images.length - 1; // Si on est au début, aller à la fin
+            }
+            return newIndex;
+        });
     };
-
     
     if (images.length === 0) return <div>Aucune image disponible</div>;
 
