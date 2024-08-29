@@ -1,27 +1,39 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import '../sass/gallery.scss';
+import leftArrow from '../assets/left_arrow.png';
+import rightArrow from '../assets/right_arrow.png';
 
 function Gallery({ images }) {
-    console.log('Images passed to Gallery:', images);
     const [currentIndex, setCurrentIndex] = useState(0);
 
+    
     const handleNext = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     };
 
+    
     const handlePrevious = () => {
         setCurrentIndex(
             (prevIndex) => (prevIndex - 1 + images.length) % images.length
         );
     };
 
-    if (images.length === 0) return <div>No images available</div>; 
+    
+    if (images.length === 0) return <div>Aucune image disponible</div>;
+
+    
+    const showPrevButton = images.length > 1;
+    const showNextButton = images.length > 1;
 
     return (
         <div className="gallery">
-            {images.length > 1 && (
-                <button className="gallery__button gallery__button--prev" onClick={handlePrevious}>
-                    &#9664;
+            {showPrevButton && (
+                <button
+                    className="gallery__button gallery__button--prev"
+                    onClick={handlePrevious}
+                >
+                    <img src={leftArrow} alt="Précédent" />
                 </button>
             )}
             <div className="gallery__image-container">
@@ -31,13 +43,21 @@ function Gallery({ images }) {
                     className="gallery__image"
                 />
             </div>
-            {images.length > 1 && (
-                <button className="gallery__button gallery__button--next" onClick={handleNext}>
-                    &#9654;
+            {showNextButton && (
+                <button
+                    className="gallery__button gallery__button--next"
+                    onClick={handleNext}
+                >
+                    <img src={rightArrow} alt="Suivant" />
                 </button>
             )}
         </div>
     );
 }
+
+
+Gallery.propTypes = {
+    images: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
 
 export default Gallery;

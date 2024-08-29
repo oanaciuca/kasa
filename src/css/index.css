@@ -1,0 +1,374 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #ffffff;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.header .header-logo {
+  height: 68px;
+}
+.header .header-nav {
+  display: flex;
+  gap: 30px;
+}
+.header .header-nav .nav-link {
+  color: #333;
+  font-weight: bold;
+  height: 34px;
+}
+.header .header-nav .nav-link[href="#a-propos"] {
+  text-decoration: none;
+}
+
+.banner {
+  position: relative;
+  background-color: #ffffff;
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+  overflow: hidden;
+  border-radius: 25px;
+}
+.banner .banner-image {
+  background-color: #ffffff;
+  border-radius: 25px;
+  width: 100%;
+  height: 223px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  background: rgba(0, 0, 0, 0.6);
+  background-blend-mode: darken;
+}
+.banner .banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  font-size: 48px;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  padding: 10px;
+  max-width: 90%;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 0;
+  margin: 16px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  width: 340px;
+  height: 340px;
+}
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée au survol */
+}
+.card .card__img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+}
+.card .card__title {
+  position: relative;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: last baseline;
+  box-sizing: border-box;
+  z-index: 1;
+  top: -70px;
+  left: 10px;
+  text-decoration: none;
+}
+
+.equipments-list {
+  margin: 20px 0;
+}
+.equipments-list h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.equipments-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.equipments-list ul li {
+  font-size: 18px;
+  margin-bottom: 5px;
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.footer {
+  background-color: #000000;
+  width: 100%;
+  height: 209px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.footer .footer-logo img {
+  filter: brightness(0) invert(1);
+  height: 39.44px;
+}
+.footer .footer-text {
+  color: #ffffff;
+  font-size: 24px;
+}
+
+.gallery {
+  position: relative;
+  width: 1240px;
+  height: 643px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gallery__image-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gallery__image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  width: 96px;
+  height: 119.64px;
+}
+.gallery__button--prev {
+  left: 10px;
+  background-image: url("../assets/left_arrow.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.gallery__button--next {
+  right: 10px;
+  background-image: url("../assets/right_arrow.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.gallery__slide-number {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 24px;
+  width: 24px;
+  height: 32.4px;
+  text-align: center;
+  line-height: 32.4px;
+}
+
+/* src/components/sass/fichelogement.scss */
+.fiche-logement {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+.fiche-logement .fiche-logement__content {
+  flex: 1;
+}
+.fiche-logement .gallery {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+.fiche-logement .gallery .gallery__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.fiche-logement .gallery .gallery__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.fiche-logement .gallery .gallery__nav .gallery__button {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #ffffff;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+.fiche-logement .gallery .gallery__nav .gallery__button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.fiche-logement .fiche-logement__details {
+  padding: 20px;
+  background-color: #ffffff;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.fiche-logement .fiche-logement__details .fiche-logement__title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.fiche-logement .fiche-logement__details .fiche-logement__location {
+  font-size: 16px;
+  color: #888;
+  margin-bottom: 20px;
+}
+.fiche-logement .fiche-logement__details .fiche-logement__description {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
+.fiche-logement .fiche-logement__details .fiche-logement__equipments .equipments__title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.fiche-logement .fiche-logement__details .fiche-logement__equipments .equipments__list {
+  list-style: none;
+  padding: 0;
+}
+.fiche-logement .fiche-logement__details .fiche-logement__equipments .equipments__list li {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+.fiche-logement .fiche-logement__details .fiche-logement__rating {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+.fiche-logement .fiche-logement__details .fiche-logement__rating .rating-container {
+  display: flex;
+  align-items: center;
+}
+.fiche-logement .fiche-logement__details .fiche-logement__rating .rating-container .rating-container__stars {
+  width: 20px;
+  height: 20px;
+  margin-right: 2px;
+}
+
+.host-info {
+  margin: 20px 0;
+}
+.host-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+.host-info .host-info__details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.host-info .host-info__details .host-info__picture {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+.host-info .host-info__details p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.logement-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Trois colonnes */
+  gap: 20px; /* Espace entre les cartes */
+  padding: 20px; /* Espacement autour des cartes */
+  max-width: 1200px; /* Largeur maximale pour l'alignement */
+  margin: 0 auto; /* Centrage du conteneur */
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+}
+
+.rating-container__stars {
+  width: 24px;
+  height: auto;
+  margin-right: 4px;
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+.tags-list .tags-list__tag {
+  background-color: #f1f1f1;
+  border-radius: 12px;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #333;
+  border: 1px solid #ddd;
+  text-transform: capitalize;
+}
+.tags-list span {
+  font-size: 14px;
+  color: #666;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -17,8 +17,7 @@
   width: 100%;
   height: 100%;
   border-radius: 10px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: block;
 }
 .card .card__title {
@@ -35,4 +34,6 @@
   top: -70px;
   left: 10px;
   text-decoration: none;
-}/*# sourceMappingURL=card.css.map */
+}
+
+/*# sourceMappingURL=card.css.map */

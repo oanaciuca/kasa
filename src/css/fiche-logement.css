@@ -17,8 +17,7 @@
 .fiche-logement .gallery .gallery__img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: block;
 }
 .fiche-logement .gallery .gallery__nav {
@@ -96,4 +95,6 @@
   width: 20px;
   height: 20px;
   margin-right: 2px;
-}/*# sourceMappingURL=fiche-logement.css.map */
+}
+
+/*# sourceMappingURL=fiche-logement.css.map */

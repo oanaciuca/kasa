@@ -1,6 +1,6 @@
 import React from 'react';
 import bannerImage from '../assets/Banner.png';
-import '../sass/banner.scss'; // Importation correcte du fichier SCSS
+import '../sass/banner.scss'; 
 
 function Banner() {
     return (

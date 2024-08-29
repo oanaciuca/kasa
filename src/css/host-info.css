@@ -1,0 +1,27 @@
+.host-info {
+  margin: 20px 0;
+}
+.host-info h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #333;
+}
+.host-info .host-info__details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.host-info .host-info__details .host-info__picture {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+.host-info .host-info__details p {
+  font-size: 18px;
+  margin: 0;
+}
+
+/*# sourceMappingURL=host-info.css.map */

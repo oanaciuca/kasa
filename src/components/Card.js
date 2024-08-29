@@ -1,8 +1,9 @@
 import React from 'react';
 import '../sass/card.scss';
 import { Link } from 'react-router-dom'; 
+import PropTypes from 'prop-types';
 
-//Component
+// Composant Card
 function Card({ id, title, picture }) {
     return (
         <Link to={`/fiche-logement/${id}`} className="card-link">
@@ -14,7 +15,11 @@ function Card({ id, title, picture }) {
     );
 }
 
+// Validation des props avec PropTypes
+Card.propTypes = {
+    id: PropTypes.string.isRequired,       
+    title: PropTypes.string.isRequired,    
+    picture: PropTypes.string.isRequired,  
+};
   
-export default Card
-
-
+export default Card;
