@@ -11,7 +11,7 @@ function Gallery({ images }) {
         setCurrentIndex((prevIndex) => {
             let newIndex = prevIndex + 1;
             if (newIndex === images.length) {
-                newIndex = 0; // Si on atteint la fin, revenir au début
+                newIndex = 0; 
             }
             return newIndex;
         });
@@ -21,7 +21,7 @@ function Gallery({ images }) {
         setCurrentIndex((prevIndex) => {
             let newIndex = prevIndex - 1;
             if (newIndex < 0) {
-                newIndex = images.length - 1; // Si on est au début, aller à la fin
+                newIndex = images.length - 1; 
             }
             return newIndex;
         });
