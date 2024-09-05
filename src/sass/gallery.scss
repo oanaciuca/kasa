@@ -34,17 +34,12 @@
 
         &--prev {
             left: 10px;
-            background-image: url('../assets/left_arrow.png');
-            background-size: contain;
-            background-repeat: no-repeat;
+            background-color: rgba(255, 255, 255, 0.5);
         }
 
         &--next {
             right: 10px;
-            background-image: url('../assets/right_arrow.png');
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-color: rgba(255, 0, 0, 0.3);
+            background-color: rgba(255, 255, 255, 0.5);
         }
     }
 

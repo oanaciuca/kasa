@@ -40,7 +40,8 @@ function Gallery({ images }) {
                     className="gallery__button gallery__button--prev"
                     onClick={handlePrevious}
                 >
-                    <img src={leftArrow} alt="Précédent" />
+                    <img src={leftArrow} alt="Précédent" /> 
+                    
                 </button>
             )}
             <div className="gallery__image-container">
@@ -55,7 +56,8 @@ function Gallery({ images }) {
                     className="gallery__button gallery__button--next"
                     onClick={handleNext}
                 >
-                    <img src={rightArrow} alt="Suivant" />
+                    <img src={rightArrow} alt="Suivant" /> 
+                    
                 </button>
             )}
         </div>

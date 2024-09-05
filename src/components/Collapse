@@ -1,29 +1,31 @@
 import React, { useState } from 'react';
-import expandArrow from '../../assets/arrow_down.png';
-import collapseArrow from '../../assets/arrow_up.png'; 
+import '../sass/collapse.scss'; // Assurez-vous que ce chemin est correct
 
-function Collapse({ title, text, className = '' }) {
-    const [isOpen, setIsOpen] = useState(false);
 
-    const toggleCollapse = () => {
-        setIsOpen(prev => !prev);
-    };
+const Collapse = ({ title, content }) => {
+  const [isOpen, setIsOpen] = useState(false);
 
-    return (
-        <div className={`collapse ${className}`}>
-            <button className="collapse__header" onClick={toggleCollapse}>
-                <h2 className="collapse__title">{title}</h2>
-                <img
-                    className={`collapse__icon ${isOpen ? 'collapse__icon--open' : ''}`}
-                    src={isOpen ? collapseArrow : expandArrow} 
-                    alt={isOpen ? "Cliquez ici pour réduire" : "Cliquez ici pour dérouler"}
-                />
-            </button>
-            <div className={`collapse__content ${isOpen ? 'collapse__content--open' : ''}`}>
-                {text}
-            </div>
-        </div>
-    );
-}
+  const toggleCollapse = () => {
+    setIsOpen(prev => !prev);
+  };
+
+  return (
+    <div className="collapse">
+      <div className="collapse__header" onClick={toggleCollapse}>
+        <h2 className="collapse__title">{title}</h2>
+        <p>
+          {isOpen ? (
+            <span>[-]</span> // Utilisez un texte pour simplifier
+          ) : (
+            <span>[+]</span> // Utilisez un texte pour simplifier
+          )}
+        </p>
+      </div>
+      <div className={`collapse__content ${isOpen ? 'collapse__content--open' : ''}`}>
+        {isOpen && <p>{content}</p>}
+      </div>
+    </div>
+  );
+};
 
 export default Collapse;
