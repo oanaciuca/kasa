@@ -1,28 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../sass/host-info.scss'; 
 
 const HostInfo = ({ host }) => {
+    console.log('HostInfo props:', host);
     return (
-        <div className="host-info">
-            <div className="host-info__details">
-                <p className="host-info__details__name">{host.name}</p>
-                <img 
-                    className="host-info__details__pic" 
-                    src={host.picture} 
-                    alt={host.name} 
-                />
-            </div>
+        <div>
+            <p>{host.name}</p>
+            {/* Autres informations sur l'hôte */}
         </div>
     );
 };
 
-
 HostInfo.propTypes = {
-    host: PropTypes.shape({
-        name: PropTypes.string.isRequired,
-        picture: PropTypes.string.isRequired
-    }).isRequired
+    host: PropTypes.object.isRequired,
 };
 
 export default HostInfo;

@@ -1,0 +1,36 @@
+.collapse {
+  border: 1px solid #ccc;
+  margin: 10px 0;
+
+  .collapse-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+
+    &:hover {
+      background-color: #e1e1e1;
+    }
+
+    .collapse-arrow {
+      width: 20px;
+      height: 20px;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  .collapse-content {
+    padding: 10px;
+    display: none;
+  }
+
+  &.open .collapse-content {
+    display: block;
+  }
+
+  &.open .collapse-arrow {
+    transform: rotate(180deg);
+  }
+}

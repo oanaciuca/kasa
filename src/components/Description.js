@@ -1,20 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Collapse from './Collapse'; 
-import '../sass/description.scss'; 
+import Collapse from '../components/Collapse'; 
+import '../sass/main.css'; 
 
 const Description = ({ description }) => {
-    const content = <p>{description}</p>;
-
-    return (
-        <div className="description">
-            <Collapse title="Description" text={content} />
-        </div>
-    );
+  return (
+    <div className="description">
+      <Collapse title="Description">
+        <p>{description}</p>
+      </Collapse>
+    </div>
+  );
 };
 
 Description.propTypes = {
-    description: PropTypes.string.isRequired
+  description: PropTypes.string.isRequired,
 };
 
 export default Description;

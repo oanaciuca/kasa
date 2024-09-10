@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+      "target": "es5",                         // Cible la version ECMAScript
+      "lib": ["dom", "dom.iterable", "esnext"], // Bibliothèques à inclure
+      "allowJs": true,                        // Permet de compiler les fichiers JavaScript
+      "skipLibCheck": true,                   // Ignore la vérification des types dans les fichiers de déclaration
+      "strict": true,                         // Active toutes les vérifications de type strictes
+      "forceConsistentCasingInFileNames": true, // Assure la cohérence des majuscules/minuscules dans les noms de fichiers
+      "noEmit": true,                         // Ne génère pas de fichiers de sortie
+      "esModuleInterop": true,                // Permet l'importation des modules CommonJS
+      "module": "esnext",                     // Module utilisé pour la compilation
+      "moduleResolution": "node",             // Stratégie de résolution des modules
+      "resolveJsonModule": true,              // Permet l'importation des fichiers JSON
+      "jsx": "react-jsx"                      // Utilise le transformateur JSX de React 17+
+    },
+    "include": [
+      "src"                                   // Répertoire contenant les fichiers à compiler
+    ],
+    "exclude": [
+      "node_modules",                         // Répertoire à exclure
+      "build"                                 // Répertoire de build à exclure
+    ]
+  }
+  

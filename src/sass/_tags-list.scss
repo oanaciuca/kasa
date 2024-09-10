@@ -1,0 +1,11 @@
+.tag-list {
+    display: flex;
+    gap: 10px; // Espace entre les tags
+    flex-wrap: wrap; // Si vous voulez que les tags passent à la ligne si l'espace est insuffisant
+}
+
+.tag {
+    padding: 5px 10px;
+    background-color: #eee;
+    border-radius: 5px;
+}

@@ -1,29 +1,27 @@
 import React, { useState } from 'react';
-import '../sass/collapse.scss'; // Assurez-vous que ce chemin est correct
+import '../sass/main.css'; 
+import arrowUp from '../assets/arrow_up.png';
+import arrowDown from '../assets/arrow_down.png';
 
 
-const Collapse = ({ title, content }) => {
+const Collapse = ({ title, children }) => { 
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleCollapse = () => {
-    setIsOpen(prev => !prev);
+    setIsOpen(!isOpen);
   };
 
   return (
-    <div className="collapse">
-      <div className="collapse__header" onClick={toggleCollapse}>
-        <h2 className="collapse__title">{title}</h2>
-        <p>
-          {isOpen ? (
-            <span>[-]</span> // Utilisez un texte pour simplifier
-          ) : (
-            <span>[+]</span> // Utilisez un texte pour simplifier
-          )}
-        </p>
+    <div className={`collapse ${isOpen ? 'open' : ''}`}>
+      <div className="collapse-header" onClick={toggleCollapse}>
+        <span>{title}</span>
+        <img
+          className="collapse-arrow"
+          src={isOpen ? arrowUp : arrowDown}
+          alt="Arrow"
+        />
       </div>
-      <div className={`collapse__content ${isOpen ? 'collapse__content--open' : ''}`}>
-        {isOpen && <p>{content}</p>}
-      </div>
+      {isOpen && <div className="collapse-content">{children}</div>} 
     </div>
   );
 };
