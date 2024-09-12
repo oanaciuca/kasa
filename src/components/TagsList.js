@@ -3,13 +3,12 @@ import PropTypes from 'prop-types';
 import '../sass/main.css';
 
 const TagsList = ({ tags }) => {
-    console.log('TagsList props:', tags);
     return (
-        <div className="tag-list">
+        <ul className="tag-list">
             {tags.map((tag, index) => (
-                <div className="tag" key={index}>{tag}</div>
+                <li className="tag" key={index}>{tag}</li>
             ))}
-        </div>
+        </ul>
     );
 };
 

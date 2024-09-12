@@ -21,9 +21,9 @@ function Card({ logement }) {
 
 Card.propTypes = {
     logement: PropTypes.shape({
-        id: PropTypes.string.isRequired,    // ID du logement est une chaîne de caractères et requise
-        cover: PropTypes.string.isRequired, // URL de l'image est une chaîne de caractères et requise
-        title: PropTypes.string.isRequired  // Titre du logement est une chaîne de caractères et requise
+        id: PropTypes.string.isRequired,    
+        cover: PropTypes.string.isRequired, 
+        title: PropTypes.string.isRequired  
     }).isRequired
 };
   

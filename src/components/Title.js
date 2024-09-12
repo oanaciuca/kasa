@@ -1,14 +1,18 @@
-// src/components/Title.js
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../sass/main.css'; // Assurez-vous d'importer le CSS approprié
 
-const Title = ({ text }) => {
-  return <h1 className="fiche-logement__title">{text}</h1>;
+const TitleLocation = ({ title, location }) => {
+    return (
+        <div className="title-location">
+            <h2 className="title">{title}</h2>
+            <p className="location">{location}</p>
+        </div>
+    );
 };
 
-Title.propTypes = {
-  text: PropTypes.string.isRequired,
+TitleLocation.propTypes = {
+    title: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
 };
 
-export default Title;
+export default TitleLocation;
