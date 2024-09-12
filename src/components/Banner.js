@@ -1,14 +1,19 @@
 import React from 'react';
-import bannerImage from '../assets/Banner.png';
+import PropTypes from 'prop-types'; 
 import '../sass/main.css'; 
 
-function Banner() {
+function Banner({title, img}) {
     return (
         <div className="banner">
-            <img src={bannerImage} alt="Banner" className="banner-image" />
-            <div className="banner-text">Chez vous, partout et ailleurs</div>
+            <img src={img} alt="Banner" className="banner-image" />
+            <div className="banner-text">{title}</div>
         </div>
     );
 }
+
+Banner.propTypes = {
+    title: PropTypes.string.isRequired,
+    img: PropTypes.string.isRequired
+};
 
 export default Banner;
