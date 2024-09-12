@@ -17,7 +17,7 @@ const Collapse = ({ title, children }) => {
         <span>{title}</span>
         <img
           className="collapse-arrow"
-          src={isOpen ? arrowUp : arrowDown}
+          src={isOpen ? arrowDown : arrowUp}
           alt="Arrow"
         />
       </div>
