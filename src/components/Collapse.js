@@ -15,7 +15,7 @@ const Collapse = ({ title, children }) => {
   return (
     <div className={`collapse ${isOpen ? 'open' : ''}`}>
       <button className="collapse-header" onClick={toggleCollapse}>
-        <span>{title}</span>
+        <span className="collapse-title">{title}</span>
         <img
           className="collapse-arrow"
           src={isOpen ? arrowDown : arrowUp}

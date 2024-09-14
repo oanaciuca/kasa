@@ -1,31 +1,27 @@
-// src/sass/host-info.scss
-
 .host-info {
-    margin: 20px 0;
-    
-    h2 {
-        font-size: 24px;
-        margin-bottom: 10px;
-        font-weight: bold;
-        color: #333;
-    }
-
-    .host-info__details {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 64px;
+    .host-name {
+        width: 93px;  
+        height: 52px; 
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 25.67px;
+        text-align: right;
+        color: #FF6060; 
         display: flex;
-        align-items: center;
-        gap: 10px;
-
-        .host-info__picture {
-            width: 96px;
-            height: 96px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 2px solid #ddd;
-        }
-
-        p {
-            font-size: 18px;
-            margin: 0;
-        }
+        flex-direction: column; 
     }
+    .host-picture {
+        margin-top: 0;
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        margin-left: 10px;
+    }
+    
+  
 }

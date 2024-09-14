@@ -1,11 +1,13 @@
 .rating-container {
     display: flex;
     align-items: center;
+    .rating-container__stars { 
+      margin-right: 4px;
+      img {
+        height: 24px;
+        width: auto;
+      }
+
   }
-  
-  .rating-container__stars {
-    width: 24px; 
-    height: auto;
-    margin-right: 4px;
-  }
+}
   

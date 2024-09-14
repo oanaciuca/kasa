@@ -36,20 +36,25 @@ const FicheLogement = () => {
             <div className="gallery">
                 <Gallery images={logement.pictures} />
             </div>
-            <div className="infos">
-                <div className="leftcolumn">
-                    <TitleLocation title={logement.title} location={logement.location} />
-                    <TagsList tags={logement.tags} />
-                </div>
-                <div className="rightcolumn">
-                    <HostInfo host={logement.host} />
-                    {rating !== null ? <Rating rating={rating} /> : <p>Rating non disponible</p>}
+            <div className="logement-info">
+                <div className="infos">
+                    <div className="leftcolumn">
+                        <TitleLocation title={logement.title} location={logement.location} />
+                        <TagsList tags={logement.tags} />
+                    </div>
+                    <div className="rightcolumn">
+                        <HostInfo host={logement.host} />
+                        {rating !== null ? <Rating rating={rating} /> : <p>Rating non disponible</p>}
+                    </div>
                 </div>
                 <div className="collapse-logement">
-                    <Collapse title="Description">
+                    <div className="description"> 
+                        <Collapse title="Description">
                         <p>{logement.description}</p>
                     </Collapse>
-                    <Collapse title="Equipements">
+                    </div>
+                    <div className="equipments">
+                        <Collapse title="Equipements">
                         <ul>
                             {logement.equipments.map((equipment, index) => (
                                 <li key={index} className="equipments-list__item">
@@ -57,7 +62,9 @@ const FicheLogement = () => {
                                 </li>
                             ))}
                         </ul>
-                    </Collapse>
+                        </Collapse>
+                    </div>
+                    
                 </div>
             </div>
         </div>

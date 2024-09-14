@@ -1,0 +1,13 @@
+.about {
+    max-width: 1400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .about-collapse {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}

@@ -1,11 +1,31 @@
-.home-content {
+.home {
+  max-width: 1400px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+
+  .home-content {
+    max-width: 1400px;
     background-color: #f6f6f6;
     width: 100%;
-    margin-top: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
     border-radius: 8px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-items: center;
+    box-sizing: border-box;
   }
-  
+
+  // Responsive design pour petits écrans
+  @media (max-width: 768px) {
+    .home-content {
+      grid-template-columns: 1fr; // Une colonne
+    }
+  }
+
+}

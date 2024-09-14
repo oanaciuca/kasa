@@ -1,6 +1,8 @@
 .collapse {
-  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
   margin: 10px 0;
+  justify-content: center;
 
   .collapse-header {
     display: flex;
@@ -8,12 +10,19 @@
     align-items: center;
     padding: 10px;
     cursor: pointer;
-    background-color: #f1f1f1;
+    background-color: #FF6060;
+    height: 52px;
+    border: none;
+    border-radius: 5px;
+    .collapse-title {
+      color: #ffffff;
+      font-family: Montserrat;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 25.67px;
+      text-align: left;
 
-    &:hover {
-      background-color: #e1e1e1;
     }
-
     .collapse-arrow {
       width: 20px;
       height: 20px;

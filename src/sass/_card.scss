@@ -1,20 +1,11 @@
-.home-content {
-  background-color: #f6f6f6; 
-  width: 100%; 
-  margin: 50px auto; 
-  padding: 20px; 
-  border-radius: 8px; 
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-  gap: 20px; 
-  box-sizing: border-box; 
-}
 
 .card-link {
   text-decoration: none; 
 }
 
 .card {
+  max-width: 340px;
+  max-height: 340px;
   border: 1px solid #ddd;
   border-radius: 10px; 
   background-color: #fff;

@@ -1,0 +1,20 @@
+.title-location {
+    display: flexbox;
+    flex-direction: column;
+    height: 77px;
+    .title {
+        color: #FF6060;
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 36px;
+        margin: 0;
+        height: 51px;
+    }
+    .location {
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 18px;
+        margin: 0;
+        height: 26px;
+    }
+}

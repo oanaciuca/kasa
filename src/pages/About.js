@@ -7,12 +7,14 @@ import aboutData from '../data/about.json';
 const About = () => {
     return (
         <div className="about">
-            <Banner title="À Propos" img={bannerImage} />
-            {aboutData.map((item, index) => (
-                <Collapse key={index} title={item.title}>
-                    <p>{item.content}</p>
-                </Collapse>
+            <Banner title="" img={bannerImage} />
+            <div className="about-collapse">
+                {aboutData.map((item, index) => (
+                    <Collapse  key={index} title={item.title}>
+                        <p>{item.content}</p>
+                    </Collapse>
             ))}
+            </div>
         </div>
     );
 };

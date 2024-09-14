@@ -1,5 +1,3 @@
-/* src/components/sass/fichelogement.scss */
-
 .fiche-logement {
     display: flex;
     flex-direction: column;
@@ -12,8 +10,9 @@
     
     .gallery {
       position: relative;
+      margin: 0;
       width: 100%;
-      height: 400px; // Ajustez selon la maquette Figma
+      height: 400px; 
       overflow: hidden;
   
       .gallery__img {
@@ -52,67 +51,38 @@
         }
       }
     }
-    
-    .fiche-logement__details {
-      padding: 20px;
-      background-color: #ffffff;
-      margin: 20px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  
-      .fiche-logement__title {
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 10px;
-      }
-  
-      .fiche-logement__location {
-        font-size: 16px;
-        color: #888;
-        margin-bottom: 20px;
-      }
-  
-      .fiche-logement__description {
-        font-size: 16px;
-        color: #333;
-        margin-bottom: 20px;
-      }
-  
-      .fiche-logement__equipments {
-        .equipments__title {
-          font-size: 18px;
-          font-weight: bold;
-          margin-bottom: 10px;
-        }
-  
-        .equipments__list {
-          list-style: none;
-          padding: 0;
-  
-          li {
-            font-size: 16px;
-            color: #333;
-            margin-bottom: 5px;
-          }
-        }
-      }
-  
-      .fiche-logement__rating {
-        margin-top: 20px;
+    .logement-info {
+      .infos {
         display: flex;
-        align-items: center;
-  
-        .rating-container {
+        flex-direction: row;
+        justify-content: space-between;
+        .leftcolumn {
+          margin-top: 20px;
           display: flex;
-          align-items: center;
-  
-          .rating-container__stars {
-            width: 20px;
-            height: 20px;
-            margin-right: 2px;
+          flex-direction: column;
+          gap: 10px;
+        }
+        .rightcolumn {
+          margin-top: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+      }
+      .collapse-logement {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .description {
+          width: 582px;
+        }
+        .equipments {
+          width: 582px;
+          ul {
+            list-style: none;
           }
         }
       }
-    }
+    }  
   }
   

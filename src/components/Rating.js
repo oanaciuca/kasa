@@ -1,19 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import rateStarActive from '../assets/rate_star_active.png';
+import rateStarInactive from '../assets/rate_star_inactive.png';
 
 const Rating = ({ rating }) => {
-    
-    console.log('Rating props:', rating);
-
-   
-    const numericRating = Number(rating);
+    const numericRating = Number(rating); 
 
     return (
         <div className="rating">
-            <p>{numericRating}</p>
             <div className="rating-stars">
                 {Array.from({ length: 5 }, (_, index) => (
-                    <span key={index} className={index < numericRating ? 'filled' : 'empty'}>★</span>
+                    <img
+                        key={index}
+                        src={index < numericRating ? rateStarActive : rateStarInactive}
+                        alt={index < numericRating ? 'Étoile active' : 'Étoile inactive'}
+                        className="rating-star"
+                    />
                 ))}
             </div>
         </div>
