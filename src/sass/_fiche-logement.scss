@@ -1,8 +1,7 @@
 .fiche-logement {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    background-color: #f5f5f5;
+    background-color: #ffffff;
     
     .fiche-logement__content {
       flex: 1;
@@ -73,6 +72,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        gap: 20px;
         .description {
           width: 582px;
         }
@@ -83,6 +83,31 @@
           }
         }
       }
-    }  
+      
   }
+
+  @media (max-width: 768px) {
+    .gallery .gallery__img {
+      border-radius: 5px;
+    }
+    .logement-info {
+      display: flex;
+      flex-direction: column;
+      .infos {
+        display: flex;
+        flex-direction: column;
+        .rightcolumn {
+          margin: 0;
+          width: 100%;
+          flex-direction: row-reverse;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+      .collapse-logement {
+        flex-direction: column;
+      }
+    }
+  }
+}  
   

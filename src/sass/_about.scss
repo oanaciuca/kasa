@@ -5,9 +5,21 @@
     flex-direction: column;
     justify-content: center;
     .about-collapse {
-        width: 100%;
+        max-width: 1023px;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        margin: auto 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about {
+        padding: 0 20px;
+
+        .about-collapse {
+            max-width: 100%;  
+            margin: 0;   
+        }
     }
 }

@@ -18,7 +18,18 @@
         font-size: 14px;
         font-weight: 700;
         line-height: 25px;
-    } 
+    }
+    
+    @media (max-width: 768px) {
+        .tag {
+            height: 18px;
+            font-family: Montserrat;
+            font-size: 10px;
+            font-weight: 700;
+            line-height: 18px;
+            text-align: center;
+        }
+    }
 }
 
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../sass/main.css'; // Assurez-vous que le CSS est correctement importé
+import '../sass/main.css'; 
 
 const Error = () => {
     return (

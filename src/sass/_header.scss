@@ -27,3 +27,40 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        height: auto;
+
+        .header-logo {
+            width: 145px; 
+            height: 46.88px;
+        }
+
+        .header-nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            width: auto;
+
+            .nav-link {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 17.11px;
+                text-align: right;
+                color: #000000; 
+                margin-left: 15px; 
+
+                &:hover {
+                    text-decoration: underline; 
+                }
+            }
+        }
+    }
+}
+

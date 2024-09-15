@@ -41,6 +41,9 @@ function Gallery({ images }) {
                     className="gallery__image"
                 />
             </div>
+            <div className="gallery__slide-number">
+                    {currentIndex + 1}/{images.length}
+                </div>
             <button
                 className="gallery__button gallery__button--next"
                 onClick={handleNext}

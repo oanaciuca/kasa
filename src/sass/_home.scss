@@ -20,12 +20,18 @@
     justify-items: center;
     box-sizing: border-box;
   }
-
-  // Responsive design pour petits écrans
-  @media (max-width: 768px) {
-    .home-content {
-      grid-template-columns: 1fr; // Une colonne
-    }
-  }
-
 }
+
+@media (max-width: 768px) {
+  .home{
+    max-width: 768px;
+    .home-content {
+      background-color: #ffffff; 
+      grid-template-columns: 1fr; 
+      padding: 0;
+    } 
+  }
+}
+
+  
+  

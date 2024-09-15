@@ -7,6 +7,7 @@ import TagsList from '../components/TagsList';
 import HostInfo from '../components/HostInfo';
 import Rating from '../components/Rating';
 import Collapse from '../components/Collapse';
+import '../sass/main.css';
 
 const FicheLogement = () => {
     const { id } = useParams();

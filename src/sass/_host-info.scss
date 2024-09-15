@@ -2,10 +2,7 @@
     margin: 0;
     display: flex;
     align-items: center;
-    height: 64px;
     .host-name {
-        width: 93px;  
-        height: 52px; 
         font-family: 'Montserrat', sans-serif;
         font-size: 18px;
         font-weight: 500;
@@ -22,6 +19,18 @@
         border-radius: 50%;
         margin-left: 10px;
     }
-    
-  
+
+    @media (max-width: 768px) {
+        .host-name {
+           font-family: Montserrat;
+           font-size: 12px;
+           font-weight: 500;
+           line-height: 17.11px;
+           text-align: right;
+        }
+        .host-picture {
+        width: 32px;
+        height: 32px;
+        }
+    }
 }

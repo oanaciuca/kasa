@@ -17,4 +17,21 @@
         margin: 0;
         height: 26px;
     }
+
+    @media (max-width: 768px) {
+        .title {
+            font-family: Montserrat;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 25.67px;
+            text-align: left;
+        }
+        .location {
+            font-family: Montserrat;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 19.96px;
+            text-align: left;
+        }
+    }
 }
