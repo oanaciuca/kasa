@@ -46,6 +46,9 @@
   }
   .banner .banner-image {
     height: 111px;
+    width: 100%;
+    max-width: 768px;
+    margin-right: 35px;
   }
   .banner .banner-text {
     font-family: "Montserrat", sans-serif;
@@ -181,6 +184,7 @@
 @media (max-width: 768px) {
   .collapse .collapse-header {
     height: 30px;
+    margin-right: 35px;
   }
   .collapse .collapse-header .collapse-title {
     font-family: Montserrat;
@@ -343,9 +347,10 @@
   color: #333;
   font-weight: bold;
   height: 34px;
-}
-.header .header-nav .nav-link[href="#a-propos"] {
   text-decoration: none;
+}
+.header .header-nav .nav-link.active {
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
@@ -355,6 +360,8 @@
     align-items: center;
     padding: 0 20px;
     height: auto;
+    max-width: 768px;
+    width: 100%;
   }
   .header .header-logo {
     width: 145px;
@@ -365,6 +372,9 @@
     flex-direction: row;
     justify-content: flex-end;
     width: auto;
+    margin-right: 40px;
+    text-transform: uppercase;
+    gap: 10px;
   }
   .header .header-nav .nav-link {
     font-family: "Montserrat", sans-serif;
@@ -374,9 +384,6 @@
     text-align: right;
     color: #000000;
     margin-left: 15px;
-  }
-  .header .header-nav .nav-link:hover {
-    text-decoration: underline;
   }
 }
 .home {
@@ -405,6 +412,10 @@
 @media (max-width: 768px) {
   .home {
     max-width: 768px;
+  }
+  .home .banner img {
+    margin-right: 0;
+    width: 100%;
   }
   .home .home-content {
     background-color: #ffffff;

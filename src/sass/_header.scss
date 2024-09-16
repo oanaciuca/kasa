@@ -20,9 +20,9 @@
             color: #333;
             font-weight: bold;
             height: 34px;
-            
-            &[href="#a-propos"] {
-                text-decoration: none; 
+            text-decoration: none;
+            &.active {
+               text-decoration: underline;
             }
         }
     }
@@ -35,6 +35,8 @@
         align-items: center;
         padding: 0 20px;
         height: auto;
+        max-width: 768px;
+        width: 100%;
 
         .header-logo {
             width: 145px; 
@@ -46,6 +48,9 @@
             flex-direction: row;
             justify-content: flex-end;
             width: auto;
+            margin-right: 40px;
+            text-transform: uppercase;
+            gap: 10px;
 
             .nav-link {
                 font-family: 'Montserrat', sans-serif;
@@ -54,11 +59,10 @@
                 line-height: 17.11px;
                 text-align: right;
                 color: #000000; 
-                margin-left: 15px; 
-
-                &:hover {
-                    text-decoration: underline; 
-                }
+                margin-left: 15px;
+                
+                
+        
             }
         }
     }

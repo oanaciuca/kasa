@@ -19,16 +19,22 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     justify-items: center;
     box-sizing: border-box;
+    
   }
 }
 
 @media (max-width: 768px) {
   .home{
+    .banner img {
+      margin-right: 0;
+      width: 100%;
+    }
     max-width: 768px;
     .home-content {
       background-color: #ffffff; 
       grid-template-columns: 1fr; 
       padding: 0;
+      
     } 
   }
 }
