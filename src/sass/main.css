@@ -105,7 +105,7 @@
 @media (max-width: 768px) {
   .card {
     max-width: 100%;
-    max-height: auto;
+    height: auto;
     border-radius: 10px;
     background-color: #ffffff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -205,18 +205,23 @@
 }
 .fiche-logement {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   background-color: #ffffff;
+  width: 100%;
+  max-width: 1400px;
 }
 .fiche-logement .fiche-logement__content {
   flex: 1;
 }
 .fiche-logement .gallery {
+  display: flex;
   position: relative;
   margin: 0;
   width: 100%;
   height: 400px;
   overflow: hidden;
+  max-width: 1400px;
 }
 .fiche-logement .gallery .gallery__img {
   width: 100%;
@@ -251,10 +256,17 @@
 .fiche-logement .gallery .gallery__nav .gallery__button:hover {
   background-color: rgba(0, 0, 0, 0.7);
 }
+.fiche-logement .logement-info {
+  display: flex;
+  max-width: 1400px;
+  width: 100%;
+  flex-direction: column;
+}
 .fiche-logement .logement-info .infos {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 50px;
 }
 .fiche-logement .logement-info .infos .leftcolumn {
   margin-top: 20px;
@@ -287,7 +299,7 @@
   .fiche-logement .gallery {
     height: 255px;
   }
-  .fiche-logement .gallery .gallery .gallery__img {
+  .fiche-logement .gallery .gallery__img {
     border-radius: 5px;
   }
   .fiche-logement .logement-info {
@@ -296,7 +308,6 @@
     margin-top: 0;
   }
   .fiche-logement .logement-info .infos {
-    display: flex;
     flex-direction: column;
     gap: 20px;
   }
@@ -339,6 +350,7 @@
 }
 
 .header {
+  display: flex;
   max-width: 1400px;
   width: 100%;
   display: flex;
@@ -435,15 +447,16 @@
   }
 }
 .gallery {
-  max-width: 100%;
+  max-width: 1400px;
   position: relative;
-  width: auto;
+  width: 100%;
   height: auto;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 25px;
+  margin: 0;
 }
 .gallery__image-container {
   max-width: 1400px;
@@ -551,17 +564,6 @@
   }
 }
 
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-
 .rating-container {
   display: flex;
   align-items: center;
@@ -619,15 +621,17 @@ code {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
 }
 .about .about-collapse {
-  max-width: 1023px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: auto 100px;
+  margin: 0;
+  padding: 20px 50px;
 }
-
 @media (max-width: 768px) {
   .about {
     padding: 0 20px;
@@ -635,10 +639,12 @@ code {
   .about .about-collapse {
     max-width: 100%;
     margin: 0;
+    padding: 20px 0;
   }
 }
+
 .title-location {
-  display: flexbox;
+  display: flex;
   flex-direction: column;
   height: 77px;
 }
@@ -760,4 +766,24 @@ code {
     line-height: 19.96px;
     text-align: left;
   }
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+}
+
+#root {
+  width: 100%;
+  max-width: 1400px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }/*# sourceMappingURL=main.css.map */

@@ -1,110 +1,131 @@
 .fiche-logement {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 1400px;
+
+  .fiche-logement__content {
+    flex: 1;
+  }
+
+  .gallery {
     display: flex;
-    flex-direction: column;
-    background-color: #ffffff;
-    
-    .fiche-logement__content {
-      flex: 1;
-    }
-    
-    .gallery {
-      position: relative;
-      margin: 0;
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    max-width: 1400px;
+
+    .gallery__img {
       width: 100%;
-      height: 400px; 
-      overflow: hidden;
-  
-      .gallery__img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-      }
-  
-      .gallery__nav {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery__nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 10px;
+
+      .gallery__button {
+        background-color: rgba(0, 0, 0, 0.5);
+        border: none;
+        color: #ffffff;
+        font-size: 24px;
+        width: 40px;
+        height: 40px;
         display: flex;
-        justify-content: space-between;
-        padding: 0 10px;
-  
-        .gallery__button {
-          background-color: rgba(0, 0, 0, 0.5);
-          border: none;
-          color: #ffffff;
-          font-size: 24px;
-          width: 40px;
-          height: 40px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          cursor: pointer;
-          border-radius: 50%;
-          transition: background-color 0.3s ease;
-  
-          &:hover {
-            background-color: rgba(0, 0, 0, 0.7);
-          }
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border-radius: 50%;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.7);
         }
       }
     }
-    .logement-info {
-      .infos {
+  }
+
+  .logement-info {
+    display: flex;
+    max-width: 1400px;
+    width: 100%;
+    flex-direction: column;
+
+    .infos {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 50px;
+
+      .leftcolumn {
+        margin-top: 20px;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        .leftcolumn {
-          margin-top: 20px;
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-        }
-        .rightcolumn {
-          margin-top: 20px;
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .rightcolumn {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    .collapse-logement {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 20px;
+
+      .description {
+        width: 582px;
+      }
+
+      .equipments {
+        width: 582px;
+
+        ul {
+          list-style: none;
         }
       }
-      .collapse-logement {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 20px;
-        .description {
-          width: 582px;
-        }
-        .equipments {
-          width: 582px;
-          ul {
-            list-style: none;
-          }
-        }
-      }
-      
+    }
   }
 
   @media (max-width: 768px) {
     .gallery {
       height: 255px;
-      .gallery .gallery__img {
+
+      .gallery__img {
         border-radius: 5px;
       }
-    } 
+    }
+
     .logement-info {
       display: flex;
       flex-direction: column;
       margin-top: 0;
+
       .infos {
-        display: flex;
         flex-direction: column;
         gap: 20px;
+
         .leftcolumn {
           gap: 20px;
           margin-bottom: 0;
         }
+
         .rightcolumn {
           margin: 0;
           width: 100%;
@@ -113,6 +134,7 @@
           justify-content: space-between;
         }
       }
+
       .collapse-logement {
         flex-direction: column;
         gap: 0;
@@ -120,5 +142,4 @@
       }
     }
   }
-}  
-  
+}
