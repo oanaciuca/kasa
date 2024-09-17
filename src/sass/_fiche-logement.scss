@@ -87,15 +87,24 @@
   }
 
   @media (max-width: 768px) {
-    .gallery .gallery__img {
-      border-radius: 5px;
-    }
+    .gallery {
+      height: 255px;
+      .gallery .gallery__img {
+        border-radius: 5px;
+      }
+    } 
     .logement-info {
       display: flex;
       flex-direction: column;
+      margin-top: 0;
       .infos {
         display: flex;
         flex-direction: column;
+        gap: 20px;
+        .leftcolumn {
+          gap: 20px;
+          margin-bottom: 0;
+        }
         .rightcolumn {
           margin: 0;
           width: 100%;
@@ -106,6 +115,8 @@
       }
       .collapse-logement {
         flex-direction: column;
+        gap: 0;
+        margin-bottom: 20px;
       }
     }
   }

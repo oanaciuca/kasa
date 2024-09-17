@@ -67,6 +67,9 @@
 
 @media (max-width: 768px) {
     .gallery {
+        margin: 0;
+        padding: 0;
+        height: 255px;
         &__image-container img {
             height: 255px;
             border-radius: 5px;
