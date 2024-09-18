@@ -210,7 +210,6 @@
   background-color: #ffffff;
   width: 100%;
   max-width: 1400px;
-  margin: 0;
 }
 .fiche-logement .fiche-logement__content {
   flex: 1;
@@ -383,7 +382,7 @@
   align-items: center;
   justify-content: space-between;
   background-color: #ffffff;
-  margin: 0 auto;
+  margin: 50px;
 }
 .header .header-logo {
   height: 68px;
@@ -411,6 +410,7 @@
     height: auto;
     max-width: 768px;
     width: 100%;
+    margin: 20px;
   }
   .header .header-logo {
     width: 145px;
