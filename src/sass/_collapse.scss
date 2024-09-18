@@ -3,6 +3,7 @@
   flex-direction: column;
   margin: 10px 0;
   justify-content: center;
+  width: 100%;
 
   .collapse-header {
     display: flex;
@@ -51,7 +52,6 @@
   .collapse {
     .collapse-header {
       height: 30px; 
-      margin-right: 35px;
       
       .collapse-title {
         font-family: Montserrat;

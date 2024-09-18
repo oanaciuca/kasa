@@ -142,6 +142,7 @@
   flex-direction: column;
   margin: 10px 0;
   justify-content: center;
+  width: 100%;
 }
 .collapse .collapse-header {
   display: flex;
@@ -184,7 +185,6 @@
 @media (max-width: 768px) {
   .collapse .collapse-header {
     height: 30px;
-    margin-right: 35px;
   }
   .collapse .collapse-header .collapse-title {
     font-family: Montserrat;
@@ -210,6 +210,7 @@
   background-color: #ffffff;
   width: 100%;
   max-width: 1400px;
+  margin: 0;
 }
 .fiche-logement .fiche-logement__content {
   flex: 1;
@@ -261,6 +262,7 @@
   max-width: 1400px;
   width: 100%;
   flex-direction: column;
+  justify-content: center;
 }
 .fiche-logement .logement-info .infos {
   display: flex;
@@ -281,16 +283,18 @@
   gap: 10px;
 }
 .fiche-logement .logement-info .collapse-logement {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 20px;
+  gap: 40px;
+  margin: 0;
 }
 .fiche-logement .logement-info .collapse-logement .description {
-  width: 582px;
+  width: 100%;
 }
 .fiche-logement .logement-info .collapse-logement .equipments {
-  width: 582px;
+  width: 100%;
 }
 .fiche-logement .logement-info .collapse-logement .equipments ul {
   list-style: none;
@@ -298,14 +302,18 @@
 @media (max-width: 768px) {
   .fiche-logement .gallery {
     height: 255px;
+    margin-top: 30px;
   }
   .fiche-logement .gallery .gallery__img {
-    border-radius: 5px;
+    border-radius: 2px;
   }
   .fiche-logement .logement-info {
+    width: 100vw;
     display: flex;
     flex-direction: column;
-    margin-top: 0;
+    margin: 0;
+    padding: 0 20px;
+    justify-content: center;
   }
   .fiche-logement .logement-info .infos {
     flex-direction: column;
@@ -316,16 +324,34 @@
     margin-bottom: 0;
   }
   .fiche-logement .logement-info .infos .rightcolumn {
+    display: flex;
     margin: 0;
-    width: 100%;
+    width: 100vw;
     flex-direction: row-reverse;
     align-items: center;
     justify-content: space-between;
   }
+  .fiche-logement .logement-info .infos .rightcolumn .host-info {
+    margin-right: 50px;
+  }
   .fiche-logement .logement-info .collapse-logement {
+    display: flex;
+    width: 100vw;
     flex-direction: column;
     gap: 0;
-    margin-bottom: 20px;
+    margin-bottom: 0;
+    padding: 0;
+    width: 100px;
+    justify-content: center;
+    min-width: 100%;
+  }
+  .fiche-logement .logement-info .collapse-logement .description {
+    width: 100vw;
+    margin: 0;
+  }
+  .fiche-logement .logement-info .collapse-logement .equipments {
+    width: 100vw;
+    margin: 0;
   }
 }
 
@@ -381,7 +407,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 20px;
     height: auto;
     max-width: 768px;
     width: 100%;
@@ -512,12 +538,13 @@
 @media (max-width: 768px) {
   .gallery .gallery {
     margin: 0;
-    padding: 0;
+    padding: 0 20px;
     height: 255px;
+    border-radius: 2px;
   }
   .gallery .gallery__image-container img {
     height: 255px;
-    border-radius: 5px;
+    border-radius: 2px;
   }
   .gallery .gallery__button img {
     width: 24px;
@@ -778,10 +805,16 @@ body {
   width: 100%;
   margin: 0;
 }
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+  }
+}
 
 #root {
   width: 100%;
   max-width: 1400px;
+  margin: 0;
 }
 
 code {
