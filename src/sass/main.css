@@ -389,13 +389,18 @@
 }
 .header .header-nav {
   display: flex;
-  gap: 30px;
+  gap: 50px;
 }
 .header .header-nav .nav-link {
-  color: #333;
+  color: #000000;
   font-weight: bold;
   height: 34px;
   text-decoration: none;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 34.22px;
+  text-align: right;
 }
 .header .header-nav .nav-link.active {
   text-decoration: underline;
