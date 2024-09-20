@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Gallery from '../components/Gallery';
 import TitleLocation from '../components/TitleLocation';
 import logementsData from '../data/logements.json';
@@ -12,7 +12,8 @@ import '../sass/main.css';
 const FicheLogement = () => {
     const { id } = useParams();
     const [logement, setLogement] = useState(null);
-
+    const navigate = useNavigate();
+    
     useEffect(() => {
         const fetchLogement = () => {
             const logementData = logementsData.find((item) => item.id === id);
@@ -20,14 +21,15 @@ const FicheLogement = () => {
                 setLogement(logementData);
             } else {
                 console.error(`Logement avec l'id ${id} non trouvé`);
+                navigate('/error'); // Redirection vers la page d'erreur si le logement n'est pas trouvé
             }
         };
 
         fetchLogement();
-    }, [id]);
+    }, [id, navigate]);
 
     if (!logement) {
-        return <p>Logement non trouvé</p>;
+        return null;
     }
 
     const rating = logement.rating ? parseFloat(logement.rating) : null;
